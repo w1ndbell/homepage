@@ -1,5 +1,36 @@
 @charset "utf-8";
 /* CSS Document */
+*{
+	font-family: bc-sklonar, sans-serif;
+}
+
+header{
+	background-color: #02EEB3;
+}
+nav{
+	height: 80px;
+	padding-left: 16px;
+	grid-column: 1/10;
+}
+main{
+	
+	
+}
+
+.grid-container1x16 {
+	display: grid;
+	grid-template-columns: repeat(16, 6.25%);
+	grid-template-rows: 80px;
+}
+.grid-container4x2 {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: repeat(4, 800px);
+}
+.nav-title {
+	font-size: 32px;
+	margin: 16px;
+}
 .intro {
     background-image: url("img/flight.jpg");
     background-size: cover;
@@ -10,13 +41,43 @@
 }
 
 .hobby {
-	background-color: 
 }
 
-.body {
-	left: 50px;
-	right: 16px;
+@media screen and (max-width: 1312px){
+	/* X-Large */
+	nav{
+		height: 80px;
+	}
+	main{
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: repeat(4, 1fr);
+	}
 }
-.nav-title {
-	font-size: 32px
+
+main > section{
+	padding: 16px;
+	background-color: gainsboro
+}
+
+@media screen and (max-width: 1056px){
+	/* Large */
+	nav{
+		height: 64px;
+	}
+	main{
+	grid-template-columns: repeat(1,1fr);
+	grid-template-rows: repeat(4, 1fr);
+	}
+}
+
+@media screen and (max-width: 672px) {
+	/* Medium */
+	nav{
+		height: 80px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	/* Small */
+	
 }
